@@ -187,20 +187,20 @@
       <Option name="active" value="true" type="bool"/>
       <Option name="alg_config"/>
       <Option name="alg_id" value="qgis:fieldcalculator" type="QString"/>
-      <Option name="component_description" value="Field calculator" type="QString"/>
+      <Option name="component_description" value="Field calculator 2" type="QString"/>
       <Option name="component_pos_x" value="1002" type="double"/>
       <Option name="component_pos_y" value="432" type="double"/>
       <Option name="dependencies"/>
       <Option name="id" value="qgis:fieldcalculator_2" type="QString"/>
       <Option name="outputs" type="Map">
-        <Option name="dsitricts_with_affected_forest" type="Map">
+        <Option name="area_with_affected_forest" type="Map">
           <Option name="child_id" value="qgis:fieldcalculator_2" type="QString"/>
-          <Option name="component_description" value="dsitricts_with_affected_forest" type="QString"/>
-          <Option name="component_pos_x" value="1206" type="double"/>
-          <Option name="component_pos_y" value="494" type="double"/>
+          <Option name="component_description" value="area_with_affected_forest" type="QString"/>
+          <Option name="component_pos_x" value="1202" type="double"/>
+          <Option name="component_pos_y" value="477" type="double"/>
           <Option name="default_value" type="invalid"/>
           <Option name="mandatory" value="false" type="bool"/>
-          <Option name="name" value="dsitricts_with_affected_forest" type="QString"/>
+          <Option name="name" value="area_with_affected_forest" type="QString"/>
           <Option name="output_name" value="OUTPUT" type="QString"/>
         </Option>
       </Option>
@@ -240,6 +240,75 @@
         <Option name="INPUT" type="List">
           <Option type="Map">
             <Option name="child_id" value="native:calculatevectoroverlaps_2" type="QString"/>
+            <Option name="output_name" value="OUTPUT" type="QString"/>
+            <Option name="source" value="1" type="int"/>
+          </Option>
+        </Option>
+        <Option name="NEW_FIELD" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="true" type="bool"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:fieldcalculator_3" type="Map">
+      <Option name="active" value="true" type="bool"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" value="qgis:fieldcalculator" type="QString"/>
+      <Option name="component_description" value="Field calculator 3" type="QString"/>
+      <Option name="component_pos_x" value="1261.6954875000001" type="double"/>
+      <Option name="component_pos_y" value="317.24713124999994" type="double"/>
+      <Option name="dependencies"/>
+      <Option name="id" value="qgis:fieldcalculator_3" type="QString"/>
+      <Option name="outputs" type="Map">
+        <Option name="affected_forest_per_district" type="Map">
+          <Option name="child_id" value="qgis:fieldcalculator_3" type="QString"/>
+          <Option name="component_description" value="affected_forest_per_district" type="QString"/>
+          <Option name="component_pos_x" value="1461.6954875000001" type="double"/>
+          <Option name="component_pos_y" value="362.24713124999994" type="double"/>
+          <Option name="default_value" type="invalid"/>
+          <Option name="mandatory" value="false" type="bool"/>
+          <Option name="name" value="affected_forest_per_district" type="QString"/>
+          <Option name="output_name" value="OUTPUT" type="QString"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" value="true" type="bool"/>
+      <Option name="parameters_collapsed" value="true" type="bool"/>
+      <Option name="params" type="Map">
+        <Option name="FIELD_LENGTH" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="5" type="int"/>
+          </Option>
+        </Option>
+        <Option name="FIELD_NAME" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="Fraction" type="QString"/>
+          </Option>
+        </Option>
+        <Option name="FIELD_PRECISION" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="3" type="int"/>
+          </Option>
+        </Option>
+        <Option name="FIELD_TYPE" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value="0" type="int"/>
+          </Option>
+        </Option>
+        <Option name="FORMULA" type="List">
+          <Option type="Map">
+            <Option name="source" value="2" type="int"/>
+            <Option name="static_value" value=" @Field_calculator_2_OUTPUT  /  @Field_calculator_OUTPUT " type="QString"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" value="qgis:fieldcalculator_2" type="QString"/>
             <Option name="output_name" value="OUTPUT" type="QString"/>
             <Option name="source" value="1" type="int"/>
           </Option>
@@ -313,14 +382,25 @@
       <Option name="parameter_type" value="sink" type="QString"/>
       <Option name="supports_non_file_outputs" value="true" type="bool"/>
     </Option>
-    <Option name="qgis:fieldcalculator_2:dsitricts_with_affected_forest" type="Map">
+    <Option name="qgis:fieldcalculator_2:area_with_affected_forest" type="Map">
       <Option name="create_by_default" value="true" type="bool"/>
       <Option name="data_type" value="-1" type="int"/>
       <Option name="default" type="invalid"/>
-      <Option name="description" value="dsitricts_with_affected_forest" type="QString"/>
+      <Option name="description" value="area_with_affected_forest" type="QString"/>
       <Option name="flags" value="0" type="int"/>
       <Option name="metadata"/>
-      <Option name="name" value="qgis:fieldcalculator_2:dsitricts_with_affected_forest" type="QString"/>
+      <Option name="name" value="qgis:fieldcalculator_2:area_with_affected_forest" type="QString"/>
+      <Option name="parameter_type" value="sink" type="QString"/>
+      <Option name="supports_non_file_outputs" value="true" type="bool"/>
+    </Option>
+    <Option name="qgis:fieldcalculator_3:affected_forest_per_district" type="Map">
+      <Option name="create_by_default" value="true" type="bool"/>
+      <Option name="data_type" value="-1" type="int"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" value="affected_forest_per_district" type="QString"/>
+      <Option name="flags" value="0" type="int"/>
+      <Option name="metadata"/>
+      <Option name="name" value="qgis:fieldcalculator_3:affected_forest_per_district" type="QString"/>
       <Option name="parameter_type" value="sink" type="QString"/>
       <Option name="supports_non_file_outputs" value="true" type="bool"/>
     </Option>

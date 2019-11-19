@@ -1,0 +1,28 @@
+QGIS version: 3.8.3-Zanzibar
+QGIS code revision: 685d8b15d2
+Qt version: 5.11.2
+GDAL version: 2.4.1
+GEOS version: 3.8.0-CAPI-1.13.1 
+PROJ version: Rel. 5.2.0, September 15th, 2018
+Processing algorithm…
+Algorithm 'forests_motorways' starting…
+Input parameters:
+{ 'bufferdistance' : 500, 'districts' : 'C:/Users/jnlpu/Documents/Studium/Geographie/5. Semester/FOSSGIS/Assignment2/data/admin_cut.shp', 'forest' : 'C:/Users/jnlpu/Documents/Studium/Geographie/5. Semester/FOSSGIS/Assignment2/data/forests.geojson|layername=forest|geometrytype=Polygon', 'motorways' : 'C:/Users/jnlpu/Documents/Studium/Geographie/5. Semester/FOSSGIS/Assignment2/data/motorways.geojson|layername=motorway|geometrytype=LineString', 'qgis:fieldcalculator_1:ForestArea_District' : 'TEMPORARY_OUTPUT', 'qgis:fieldcalculator_2:area_with_affected_forest' : 'TEMPORARY_OUTPUT', 'qgis:fieldcalculator_3:affected_forest_per_district' : 'TEMPORARY_OUTPUT' }
+
+Prepare algorithm: native:buffer_1
+Running Buffer [1/6]
+Input Parameters:
+{ DISSOLVE: False, DISTANCE: 500, END_CAP_STYLE: 0, INPUT: 'C:/Users/jnlpu/Documents/Studium/Geographie/5. Semester/FOSSGIS/Assignment2/data/motorways.geojson|layername=motorway|geometrytype=LineString', JOIN_STYLE: 0, MITER_LIMIT: 2, OUTPUT: 'memory:Buffered', SEGMENTS: 5 }
+OK. Execution took 0.182 s (1 outputs).
+Prepare algorithm: native:calculatevectoroverlaps_1
+Running Overlap analysis [2/6]
+Input Parameters:
+{ INPUT: 'C:/Users/jnlpu/Documents/Studium/Geographie/5. Semester/FOSSGIS/Assignment2/data/admin_cut.shp', LAYERS: ['C:/Users/jnlpu/Documents/Studium/Geographie/5. Semester/FOSSGIS/Assignment2/data/forests.geojson|layername=forest|geometrytype=Polygon'], OUTPUT: 'memory:Output layer' }
+Preparing forests forest
+Feature (30) has invalid geometry. Please fix the geometry or change the Processing setting to the "Ignore invalid input features" option.
+Error encountered while running Overlap analysis
+Error encountered while running Overlap analysis
+Execution failed after 0.70 seconds
+
+Loading resulting layers
+Algorithm 'forests_motorways' finished
